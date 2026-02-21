@@ -1,17 +1,25 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router";
 
-const navbar = () => {
+const Navbar = () => {
   return (
-    <div>
-        <nav>
-            <ul>
-                <li><a href="/dashboard">Dashboard</a></li>
-                <li><a href="/profile">Profile</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </nav>
-    </div>
-  )
-}
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        flexDirection: "row",
+        gap: "20px",
+        margin: "20px",
+        padding: "10px",
+      }}
+    >
+      <Link to="/login">Login</Link>
+      <Link to="/dashboard">Dashboard</Link>
 
-export default navbar
+      <Link to="/profile">Profile</Link>
+    </div>
+  );
+};
+
+export default Navbar;
